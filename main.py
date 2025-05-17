@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+from dotenv import load_dotenv
 import logging
 from contextlib import asynccontextmanager
 from collections.abc import AsyncIterator
@@ -36,6 +37,11 @@ from src.tasks import (
 from src.tasks_sync import (
     todoist_move_task,
 )
+
+
+
+# Load environment variables
+load_dotenv()
 
 # Setup logging
 logging.basicConfig(
